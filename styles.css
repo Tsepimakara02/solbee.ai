@@ -12,18 +12,86 @@ body {
   background-color: #fbfdff;
 }
 
-.site-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 0px;
-  padding-bottom: 16px;
-}
-
 .logo {
   height: 59px;
   width: auto;
   display: block;
-  margin-top: -8px;
+  margin-top: 150px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  background: white;
+  color: #202124;
+}
+
+/* Center everything */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /*border: red solid 1px;*/
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 375px;
+}
+
+/* Logo */
+.logo {
+  height: 78px;
+  margin: 0;
+}
+
+/* Input bar */
+.search-bar {
+  width: 600px;
+  max-width: 90%;
+  height: 52px;
+  padding: 0 24px;
+  font-size: 16px;
+  border-radius: 999px;
+  border: 1px solid #dfe1e5;
+  outline: none;
+  caret-color: #9b9a9a; /* or a brand color */
+}
+
+/* Focus state */
+.search-bar:focus {
+}
+
+.search-bar::placeholder {
+  color: #9aa0a6; /* soft gray */
+}
+
+.bar-div {
+  display: flex;
+  justify-content: center;
+}
+
+#how-solbee-works-button {
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  background: none;
+  color: #a2a7ad;
+  font-size: small;
+}
+
+.hero-content {
+  /*border: solid green 1px;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
 }
