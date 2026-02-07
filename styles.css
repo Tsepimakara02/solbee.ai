@@ -79,13 +79,27 @@ body {
   justify-content: center;
 }
 
-#how-solbee-works-button {
+.button {
   width: fit-content;
   height: fit-content;
   border: none;
   background: none;
-  color: #a2a7ad;
+  color: #90959a;
   font-size: small;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.button:hover {
+  background: linear-gradient(
+    90deg,
+    #d2b6ff,
+    /* luminous lavender */ #9a8cff,
+    /* electric periwinkle */ #5fa8ff /* neon-leaning blue */
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .hero-content {
@@ -94,4 +108,58 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 14px;
+}
+
+.quote {
+  color: #6b6e72;
+}
+
+.topbar {
+  position: sticky; /* stays at top when scrolling */
+  top: 0;
+  z-index: 1000;
+
+  /* Option A: light lavender */
+  background: rgba(243, 238, 255, 0.9);
+
+  /* subtle separation */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(8px);
+}
+
+.topbar-inner {
+  width: 100%;
+  max-width: none; /* KEY: lets right side reach viewport edge */
+  margin: 0 auto;
+  padding: 4px 18px;
+
+  display: grid; /* KEY */
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.topbar-left {
+  grid-column: 2; /* center column */
+  justify-self: center;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.65);
+  white-space: nowrap;
+}
+
+.topbar-btn {
+  grid-column: 3; /* right column */
+  justify-self: end;
+
+  font-size: 13px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.75);
+
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.topbar-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
 }
